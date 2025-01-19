@@ -1,6 +1,6 @@
 /* ================================
    GLOBAL RESET & BASE THEME
-================================ */
+=============================== */
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +9,13 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff; /* changed from black to white */
-  color: #000;            /* changed from white to black */
+  background-color: #fff;
+  color: #000;
 
   /* Subtle grid lines */
   background-image:
-    linear-gradient(#ddd 1px, transparent 1px), /* changed from #111 to #ddd */
-    linear-gradient(90deg, #ddd 1px, transparent 1px); /* changed from #111 to #ddd */
+    linear-gradient(#ddd 1px, transparent 1px),
+    linear-gradient(90deg, #ddd 1px, transparent 1px);
   background-size: 60px 60px;
   background-repeat: repeat;
 
@@ -27,34 +27,34 @@ body {
 
 /* ================================
    MAIN CONTAINER (3:1 LAYOUT)
-================================ */
+=============================== */
 .container {
   width: 1200px;
   height: 700px;
   display: flex;
-  background-color: rgba(255, 255, 255, 0.9); /* changed from rgba(0, 0, 0, 0.6) */
-  border: 1px solid #ccc; /* changed from #222 */
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* adjusted shadow for light theme */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 /* ================================
    CHAT AREA (3 parts)
-================================ */
+=============================== */
 .chat-area {
   flex: 3;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background-color: rgba(240, 240, 240, 0.9); /* changed from rgba(25, 25, 25, 0.6) */
-  border-right: 1px solid #ccc; /* changed from #333 */
+  background-color: rgba(240, 240, 240, 0.9);
+  border-right: 1px solid #ccc;
 }
 
 .chat-area h1 {
   margin-bottom: 15px;
-  font-size: 1.8rem;
-  color: #000; /* changed from #fff */
+  font-size: 1.6rem;
+  color: #000;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -78,24 +78,24 @@ body {
 .chat-controls input[type="text"] {
   flex: 1;
   padding: 8px;
-  font-size: 14px;
-  border: 1px solid #ccc; /* changed from #444 */
+  font-size: 13px;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  background: #f9f9f9; /* changed from #1c1c1c */
-  color: #000; /* changed from #f5f5f5 */
+  background: #f9f9f9;
+  color: #000;
 }
 .chat-controls input[type="text"]::placeholder {
-  color: #666; /* changed from #999 */
+  color: #666;
 }
 
 .chat-controls button {
   cursor: pointer;
-  padding: 9px 14px;
+  padding: 8px 12px;
   border: none;
   border-radius: 4px;
   background-color: #62a0ea;
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   transition: all 0.3s ease;
 }
 .chat-controls button:hover {
@@ -111,8 +111,8 @@ body {
 .chat-messages {
   flex: 1;
   overflow-y: auto;
-  background: rgba(240, 240, 240, 0.9); /* changed from rgba(255, 255, 255, 0.02) */
-  border: 1px solid #ccc; /* changed from #333 */
+  background: rgba(240, 240, 240, 0.9);
+  border: 1px solid #ccc;
   border-radius: 5px;
   padding: 15px;
   margin-bottom: 20px;
@@ -121,7 +121,7 @@ body {
 .message {
   margin-bottom: 15px;
   animation: fadeIn 0.5s ease forwards;
-  opacity: 0; /* Start invisible */
+  opacity: 0;
 }
 
 @keyframes fadeIn {
@@ -140,7 +140,7 @@ body {
   padding: 10px 15px;
   border-radius: 15px;
   max-width: 70%;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.4;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -155,9 +155,9 @@ body {
 }
 
 .message.assistant .bubble {
-  background-color: #e0e0e0; /* changed from #424242 */
+  background-color: #e0e0e0;
   float: left;
-  color: #000; /* changed from #e0e0e0 */
+  color: #000;
   margin-right: 30%;
   border-radius: 0 15px 15px 15px;
 }
@@ -170,23 +170,23 @@ body {
 
 /* ================================
    RESOURCE AREA (1 part)
-================================ */
+=============================== */
 .resource-area {
   flex: 1;
-  background-color: rgba(240, 240, 240, 0.9); /* changed from rgba(25, 25, 25, 0.8) */
+  background-color: rgba(240, 240, 240, 0.9);
   padding: 20px;
   overflow-y: auto;
 }
 
 .resource-area h2 {
   margin-bottom: 15px;
-  color: #000; /* changed from #fff */
-  font-size: 1.4rem;
+  color: #000;
+  font-size: 1.2rem;
 }
 
 .tip {
-  font-size: 13px;
-  color: #666; /* changed from #aaa */
+  font-size: 12px;
+  color: #666;
   margin-bottom: 10px;
 }
 
@@ -194,35 +194,36 @@ body {
   font-weight: 500;
   display: block;
   margin-bottom: 5px;
-  color: #000; /* changed from #f5f5f5 */
+  color: #000;
 }
+
 .resource-area input[type="text"],
 .resource-area input[type="file"] {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
-  border: 1px solid #ccc; /* changed from #444 */
+  border: 1px solid #ccc;
   border-radius: 4px;
-  background: #f9f9f9; /* changed from #1c1c1c */
-  color: #000; /* changed from #f5f5f5 */
-  font-size: 13px;
+  background: #f9f9f9;
+  color: #000;
+  font-size: 12px;
 }
 .resource-area input[type="text"]::placeholder {
-  color: #666; /* changed from #999 */
+  color: #666;
 }
 
 details {
-  border: 1px solid #ccc; /* changed from #333 */
+  border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 12px;
-  background: #f9f9f9; /* changed from #1c1c1c */
+  background: #f9f9f9;
   padding: 5px;
   transition: all 0.3s;
 }
 details summary {
   cursor: pointer;
   outline: none;
-  font-size: 14px;
+  font-size: 13px;
   color: #62a0ea;
   list-style: none;
   display: flex;
@@ -235,7 +236,7 @@ details[open] {
   border-color: #62a0ea;
 }
 details[open] summary {
-  color: #000; /* changed from #fff */
+  color: #000;
 }
 
 .resource-inputs {
@@ -245,6 +246,7 @@ details[open] summary {
 }
 .resource-inputs input {
   margin-bottom: 8px;
+  font-size: 12px;
 }
 
 /* SCROLLBAR STYLING (optional) */
@@ -252,13 +254,13 @@ details[open] summary {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f9f9f9; /* changed from #1c1c1c */
+  background: #f9f9f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ccc; /* changed from #444 */
+  background: #ccc;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #bbb; /* changed from #555 */
+  background: #bbb;
 }
 
 /* =======================================
@@ -270,14 +272,42 @@ details[open] summary {
   margin-right: 8px;
   object-fit: cover;
   vertical-align: middle;
-  border-radius: 50%; /* optional if you want it circular */
+  border-radius: 50%;
 }
 
 /* ================================
    LOADING VIDEO STYLE
-================================ */
+=============================== */
 .loading-video {
-  width: 50px; /* Adjust size as needed */
+  width: 50px;
   height: 50px;
   object-fit: contain;
+}
+
+/* ================================
+   HOW TO USE LIST STYLING
+=============================== */
+.how-to-list {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  font-size: 12px; /* Set a base font size for the list */
+  line-height: 1.4;
+}
+
+.how-to-list li {
+  margin-bottom: 10px;
+}
+
+.how-to-list li strong {
+  font-size: 12px; /* Ensure strong text matches the list font size */
+}
+
+.how-to-list ul {
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+.how-to-list ul li {
+  font-size: 12px; /* Smaller font size for nested list items */
+  margin-bottom: 5px;
 }
