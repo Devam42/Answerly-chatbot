@@ -1,0 +1,388 @@
+/* ================================
+   GLOBAL RESET & BASE STYLES
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;  /* changed from black to white */
+  color: #000;             /* changed from white to black */
+
+  background-image:
+    linear-gradient(#ddd 1px, transparent 1px), /* changed from #111 to #ddd */
+    linear-gradient(90deg, #ddd 1px, transparent 1px); /* changed from #111 to #ddd */
+  background-size: 60px 60px;
+  background-repeat: repeat;
+}
+
+p {
+  line-height: 1.6;
+  color: #555; /* changed from #ccc */
+}
+
+a {
+  text-decoration: none;
+  color: #000; /* changed from #fff */
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9); /* changed from rgba(0, 0, 0, 0.9) */
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc; /* changed from #222 */
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000; /* changed from #fff */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.nav-right a {
+  color: #666; /* changed from #ccc */
+  margin-left: 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-right a:hover {
+  color: #000; /* changed from #fff */
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+.hero-centered {
+  position: relative;
+  padding: 100px 20px;
+  min-height: 600px;
+  text-align: center;
+}
+.hero-centered-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.hero-centered-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #000; /* changed from #fff */
+  margin-bottom: 30px;
+}
+.hero-centered h1 {
+  font-size: 2.5rem;
+  color: #000; /* changed from #fff */
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.hero-centered p {
+  margin-bottom: 30px;
+  color: #555; /* ensure text is readable on light background */
+}
+.disclaimer-centered-btn {
+  background-color: #000; /* changed from #fff */
+  color: #fff;            /* changed from #000 */
+  border: none;
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.disclaimer-centered-btn:hover {
+  background-color: #333; /* changed from #e4e4e4 */
+}
+
+/* ================================
+   ABOUT ME SECTION
+================================ */
+.about-me {
+  background-color: rgba(255, 255, 255, 0.9); /* changed from rgba(0, 0, 0, 0.6) */
+  padding: 60px 20px;
+  text-align: center;
+}
+.about-me h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #000; /* changed from #fff */
+}
+.about-me-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+.about-me-content p {
+  margin-bottom: 15px;
+  color: #333; /* ensure readability */
+}
+.highlight {
+  font-size: 1.2rem;
+  color: #000; /* changed from #fff */
+  margin-bottom: 20px;
+}
+.white-text {
+  color: #000; /* changed from #fff */
+}
+.emoji {
+  color: #000; /* changed from #fff */
+}
+
+/********************************************
+  2x2 STEPS SECTION (like your second image)
+*********************************************/
+.steps-2x2 {
+  background-color: rgba(255, 255, 255, 0.9); /* changed from rgba(0, 0, 0, 0.6) */
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* center horizontally */
+  text-align: left; /* or center if you prefer */
+}
+
+.steps-2x2 h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #000; /* changed from #fff */
+  /* optional letter spacing or transform */
+}
+
+/* Each row (2 columns per row) */
+.step-row {
+  display: flex;
+  flex-wrap: wrap;  /* allow wrapping on smaller screens */
+  gap: 30px;
+  margin-bottom: 40px; /* spacing between row 1 and row 2 */
+}
+
+.step-box {
+  flex: 1;               /* each box expands equally */
+  min-width: 300px;      /* ensure boxes don’t get too narrow on small screens */
+  background-color: rgba(240, 240, 240, 0.9); /* changed from rgba(25, 25, 25, 0.8) */
+  border: 1px solid #ccc; /* changed from #222 */
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.step-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* adjusted for light theme */
+}
+
+/* The MP4 "icon" for each step */
+.step-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  /* If you want them bigger, just adjust width/height. */
+}
+
+.step-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #000; /* changed from #fff */
+  font-weight: 600;
+}
+
+.step-box p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555; /* changed from #ccc */
+}
+
+/* Example "pink-link" style, for brand highlight */
+.pink-link {
+  color: #E1306C;
+  text-decoration: none;
+}
+.pink-link:hover {
+  color: #ff5f9b; /* or adjust highlight color */
+}
+
+
+/* ================================
+   TECH LOGOS SECTION
+================================ */
+.tech-logos {
+  background-color: rgba(255, 255, 255, 0.9); /* changed from rgba(0, 0, 0, 0.6) */
+  padding: 60px 20px;
+  text-align: center;
+}
+.tech-logos h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #000; /* changed from #fff */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.tech-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* 3 columns, so 2 rows for 5 items */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.tech-box {
+  background-color: rgba(240, 240, 240, 0.9); /* changed from rgba(25, 25, 25, 0.8) */
+  border: 1px solid #ccc; /* changed from #222 */
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  min-height: 120px; /* decent height for the boxes */
+}
+.tech-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* adjusted for light theme */
+}
+.tech-box img {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+}
+.tech-logo-text {
+  color: #000; /* changed from #fff */
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* ================================
+   REMINDER SECTION
+================================ */
+.reminder {
+  background-color: rgba(255, 255, 255, 0.9); /* changed from rgba(0, 0, 0, 0.6) */
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+.reminder h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #000; /* changed from #fff */
+}
+.reminder p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555; /* changed from #ccc */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ================================
+   FOOTER
+================================ */
+.footer {
+  background-color: rgba(255, 255, 255, 0.9); /* changed from rgba(0, 0, 0, 0.9) */
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid #ccc; /* changed from #222 */
+  color: #777; /* changed from #bbb */
+}
+.footer-top {
+  margin-bottom: 10px;
+}
+.footer-top p {
+  margin: 5px 0;
+  color: #000; /* ensure readability */
+}
+.social-links {
+  margin-top: 5px;
+}
+.linkedin {
+  color: #0A66C2;
+}
+.github {
+  color: #555; /* changed from #ccc */
+}
+.instagram {
+  color: #E1306C;
+}
+.footer a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  color: inherit; /* ensure links inherit the current text color */
+}
+.footer a:hover {
+  color: #000; /* changed from #fff */
+}
+.footer-bottom p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555; /* ensure readability */
+}
+
+/* ================================
+   FLOATING CHAT
+================================ */
+.floating-chat {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgba(255,255,255,0.9); /* changed from rgba(0,0,0,0.8) */
+  border-radius: 8px;
+  padding: 15px;
+  border: 2px solid #ccc; /* changed from #444 */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3); /* adjusted shadow for light theme */
+  z-index: 9999;
+
+  /* NEW: Use flexbox to center items vertically & horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-video {
+  width: 120px;      /* or your preferred size */
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.floating-chat a {
+  background-color: #000; /* changed from #fff */
+  color: #fff;            /* changed from #000 */
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.floating-chat a:hover {
+  background-color: #333; /* changed from #e4e4e4 */
+}

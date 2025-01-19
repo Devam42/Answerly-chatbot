@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  # -------------------------------
+  # 1) Flask Backend
+  # -------------------------------
+  poppy-backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile   # the Dockerfile in your repo root
+    container_name: poppy-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    # If your code needs a specific command to run:
+    command: python main.py
+    # Or if you used something else in your Dockerfile, adapt accordingly
+
+  # -------------------------------
+  # 2) React Frontend
+  # -------------------------------
+  poppy-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: poppy-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - poppy-backend

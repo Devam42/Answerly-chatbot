@@ -1,0 +1,283 @@
+/* ================================
+   GLOBAL RESET & BASE THEME
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff; /* changed from black to white */
+  color: #000;            /* changed from white to black */
+
+  /* Subtle grid lines */
+  background-image:
+    linear-gradient(#ddd 1px, transparent 1px), /* changed from #111 to #ddd */
+    linear-gradient(90deg, #ddd 1px, transparent 1px); /* changed from #111 to #ddd */
+  background-size: 60px 60px;
+  background-repeat: repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ================================
+   MAIN CONTAINER (3:1 LAYOUT)
+================================ */
+.container {
+  width: 1200px;
+  height: 700px;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.9); /* changed from rgba(0, 0, 0, 0.6) */
+  border: 1px solid #ccc; /* changed from #222 */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* adjusted shadow for light theme */
+}
+
+/* ================================
+   CHAT AREA (3 parts)
+================================ */
+.chat-area {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(240, 240, 240, 0.9); /* changed from rgba(25, 25, 25, 0.6) */
+  border-right: 1px solid #ccc; /* changed from #333 */
+}
+
+.chat-area h1 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #000; /* changed from #fff */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* For the inserted logo in the <h1> */
+.answerly-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.chat-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-controls input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc; /* changed from #444 */
+  border-radius: 4px;
+  background: #f9f9f9; /* changed from #1c1c1c */
+  color: #000; /* changed from #f5f5f5 */
+}
+.chat-controls input[type="text"]::placeholder {
+  color: #666; /* changed from #999 */
+}
+
+.chat-controls button {
+  cursor: pointer;
+  padding: 9px 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #62a0ea;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.chat-controls button:hover {
+  background-color: #428bd1;
+}
+.danger {
+  background-color: #d32f2f;
+}
+.danger:hover {
+  background-color: #b71c1c;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  background: rgba(240, 240, 240, 0.9); /* changed from rgba(255, 255, 255, 0.02) */
+  border: 1px solid #ccc; /* changed from #333 */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.message {
+  margin-bottom: 15px;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0; /* Start invisible */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bubble {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 70%;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.message.user .bubble {
+  background-color: #2979ff;
+  color: #fff;
+  float: right;
+  margin-left: 30%;
+  border-radius: 15px 0 15px 15px;
+}
+
+.message.assistant .bubble {
+  background-color: #e0e0e0; /* changed from #424242 */
+  float: left;
+  color: #000; /* changed from #e0e0e0 */
+  margin-right: 30%;
+  border-radius: 0 15px 15px 15px;
+}
+
+.message::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ================================
+   RESOURCE AREA (1 part)
+================================ */
+.resource-area {
+  flex: 1;
+  background-color: rgba(240, 240, 240, 0.9); /* changed from rgba(25, 25, 25, 0.8) */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.resource-area h2 {
+  margin-bottom: 15px;
+  color: #000; /* changed from #fff */
+  font-size: 1.4rem;
+}
+
+.tip {
+  font-size: 13px;
+  color: #666; /* changed from #aaa */
+  margin-bottom: 10px;
+}
+
+.resource-area label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+  color: #000; /* changed from #f5f5f5 */
+}
+.resource-area input[type="text"],
+.resource-area input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* changed from #444 */
+  border-radius: 4px;
+  background: #f9f9f9; /* changed from #1c1c1c */
+  color: #000; /* changed from #f5f5f5 */
+  font-size: 13px;
+}
+.resource-area input[type="text"]::placeholder {
+  color: #666; /* changed from #999 */
+}
+
+details {
+  border: 1px solid #ccc; /* changed from #333 */
+  border-radius: 4px;
+  margin-bottom: 12px;
+  background: #f9f9f9; /* changed from #1c1c1c */
+  padding: 5px;
+  transition: all 0.3s;
+}
+details summary {
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+  color: #62a0ea;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details[open] {
+  border-color: #62a0ea;
+}
+details[open] summary {
+  color: #000; /* changed from #fff */
+}
+
+.resource-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+.resource-inputs input {
+  margin-bottom: 8px;
+}
+
+/* SCROLLBAR STYLING (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f9f9f9; /* changed from #1c1c1c */
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc; /* changed from #444 */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bbb; /* changed from #555 */
+}
+
+/* =======================================
+   NEW CLASS FOR MP4 ICONS (summary icons)
+========================================= */
+.resource-icon-video {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  object-fit: cover;
+  vertical-align: middle;
+  border-radius: 50%; /* optional if you want it circular */
+}
+
+/* ================================
+   LOADING VIDEO STYLE
+================================ */
+.loading-video {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+  object-fit: contain;
+}

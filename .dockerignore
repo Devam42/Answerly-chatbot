@@ -1,0 +1,32 @@
+# Ignore Python cache and environment directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+
+# Ignore project-specific directories (optional Poppy)
+Poppy/lib64
+Poppy/env
+Poppy/venv
+
+# Ignore version control files
+.git/
+.svn/
+.hg/
+
+# Ignore OS and system-specific files
+.DS_Store
+.vscode/
+logs/*
+*.log
+
+# Ignore large files and directories
+uploads/
+datasets/
+node_modules/
+.cache/
+build/
+dist/
+*.egg-info/

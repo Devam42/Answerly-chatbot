@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Answerly</title>
+
+  <!-- Link to your landing CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_landing.css') }}">
+
+  <!-- (Optional) Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-...your-hash-here..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">
+      <!-- Main Logo -->
+      <img
+        src="{{ url_for('static', filename='logos/0ddbce80-3e34-4b04-842c-e0911537c27f.webp') }}"
+        alt="Logo"
+        class="logo"
+      >
+      <span class="brand-name">ANSWERLY</span>
+    </div>
+    <div class="nav-right">
+      <!-- Updated LinkedIn and GitHub links -->
+      <a href="https://www.linkedin.com/in/devam-kathane-1ba11721b/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Devam42?tab=repositories" target="_blank">Github</a>
+    </div>
+  </header>
+
+
+  <!-- HERO SECTION (Centered) -->
+  <section class="hero-centered">
+    <div class="hero-centered-content">
+      <!-- Circular Profile Image -->
+      <div class="hero-centered-image">
+        <img
+          src="{{ url_for('static', filename='logos/0ddbce80-3e34-4b04-842c-e0911537c27f.webp') }}"
+          alt="Profile"
+        />
+      </div>
+
+      <!-- Main Heading -->
+      <h1>
+        Answerly: One Bot. Infinite Sources. Unmatched Insights.<br>
+      </h1>
+
+      <!-- Subtext/Tagline -->
+      <p>
+        Explore AI-driven insights from multiple data sources. 
+        This project is purely experimental and for fun—no official endorsement, just a creative take.
+      </p>
+
+      <!-- Disclaimer Button -->
+      <!-- Redirect to the disclaimer section by using an anchor link. -->
+      <button class="disclaimer-centered-btn" onclick="window.location.href='#disclaimer'">
+        DISCLAIMER
+      </button>
+    </div>
+  </section>
+
+  <!-- ABOUT ME SECTION -->
+  <section class="about-me">
+    <h2>About Me</h2>
+    <div class="about-me-content">
+      <p class="highlight">🚀 Passionate Data Scientist & AI Engineer</p>
+      <p>
+        Hi, I’m <strong class="white-text">Devam Kathane</strong>, a tech enthusiast deeply passionate about building 
+        innovative AI solutions that solve real-world problems. I love exploring cutting-edge technologies in 
+        Machine Learning, Deep Learning, and Generative AI, while ensuring seamless deployment through 
+        Cloud Computing, DevOps, and MLOps practices.
+      </p>
+      <p>
+        <strong>🔍 Specializing in:</strong><br>
+        🤖 Machine Learning | 🧠 Deep Learning | ✨ Generative AI | ☁️ Cloud Deployment | 🔧 DevOps | 🔄 MLOps
+      </p>
+      <p>
+        <strong>🛠️ Tech Stack & Tools:</strong><br>
+        🐍 Python | 🌐 Flask | 🐳 Docker | 📦 MongoDB | 🛠️ LangChain | 🧩 HuggingFace | ☁️ AWS | ☁️ Azure | ☁️ GCP
+      </p>
+      <p>
+        <strong>📬 Let’s Connect:</strong><br>
+        📧 Email: <a href="mailto:dkathane42@gmail.com" class="text-link">dkathane42@gmail.com</a><br>
+        🔗 LinkedIn: <a href="https://linkedin.com/in/devam-kathane-1ba11721b" class="text-link" target="_blank">linkedin.com/in/devam-kathane-1ba11721b</a>
+      </p>
+      <p>
+        <strong>💡 Driven by Innovation | Powered by AI | Focused on Impact</strong><br>
+        Let’s connect and create something extraordinary! <span class="emoji">🌟</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- HOW WE BUILT (NAME) SECTION -->
+  <section class="steps-2x2">
+    <h2>How We Built DhruvAI: The Tech Behind the Talk</h2>
+
+    <div class="step-row">
+      <!-- Step 1 -->
+      <div class="step-box">
+        <!-- Video icon for Step 1 -->
+        <video 
+          src="{{ url_for('static', filename='mp4_icons/data-collection.mp4') }}" 
+          autoplay 
+          loop 
+          muted 
+          playsinline
+          class="step-icon"
+        ></video>
+        <h3>Step 1: Data Collection</h3>
+        <p>
+          The chatbot begins by collecting data from
+          <a href="#" class="pink-link">multiple sources</a> to effectively address specific questions based on that information.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-box">
+        <!-- Video icon for Step 2 -->
+        <video 
+          src="{{ url_for('static', filename='mp4_icons/Data.mp4') }}" 
+          autoplay 
+          loop 
+          muted 
+          playsinline
+          class="step-icon"
+        ></video>
+        <h3>Step 2: Data Preprocessing</h3>
+        <p>
+          Using <a href="#" class="pink-link">LangChain, Whisper, Self build youtube API, multiple tools</a> and 
+          <a href="#" class="pink-link">Google Generative AI embeddings</a>,
+          we transformed the data into vector data for easy search and retrieval.
+        </p>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <!-- Step 3 -->
+      <div class="step-box">
+        <!-- Video icon for Step 3 -->
+        <video 
+          src="{{ url_for('static', filename='mp4_icons/Business Growth.mp4') }}" 
+          autoplay 
+          loop 
+          muted 
+          playsinline
+          class="step-icon"
+        ></video>
+        <h3>Step 3: Data Storing</h3>
+        <p>
+          The vector data was securely stored in
+          <a href="#" class="pink-link">Pinecone</a>, a cloud-based vector database built for fast and efficient data retrieval.
+        </p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-box">
+        <!-- Video icon for Step 4 -->
+        <video 
+          src="{{ url_for('static', filename='mp4_icons/Chatbot.mp4') }}" 
+          autoplay 
+          loop 
+          muted 
+          playsinline
+          class="step-icon"
+        ></video>
+        <h3>Step 4: Chatbot building</h3>
+        <p>
+          When a user sends a message, the chatbot first searches for an answer in Pinecone. If no answer is found, it analyzes the 
+          documents the user has attached and generates a response using <a href="#" class="pink-link">Google Gemini</a>. 
+          This process ensures the chatbot provides accurate replies based on the provided documents.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH LOGOS SECTION -->
+  <section class="tech-logos">
+    <h2>Technologies Behind Our Chatbot</h2>
+    <div class="tech-grid">
+      <!-- 1st row (3 items) -->
+      <div class="tech-box">
+        <img
+          src="{{ url_for('static', filename='logos/gemini.png') }}"
+          alt="Gemini"
+        />
+      </div>
+      <div class="tech-box">
+        <img
+          src="{{ url_for('static', filename='logos/openai.png') }}"
+          alt="OpenAI"
+        />
+      </div>
+      <div class="tech-box">
+        <img
+          src="{{ url_for('static', filename='logos/langchain.svg') }}"
+          alt="LangChain"
+        />
+      </div>
+
+      <!-- 2nd row (2 items) -->
+      <div class="tech-box">
+        <img
+          src="{{ url_for('static', filename='logos/pinecone.png') }}"
+          alt="Pinecone"
+        />
+      </div>
+      <div class="tech-box">
+        <span class="tech-logo-text">Selenium</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRIENDLY REMINDER SECTION (Disclaimer) -->
+  <!-- Add an id here so the disclaimer button can jump to this section -->
+  <section class="reminder" id="disclaimer">
+    <h2>Friendly Reminder: <span>😉</span></h2>
+    <p>
+      This is just an exciting AI experiment! 🚀 We’re pushing the limits of what AI can do by creating a chatbot 
+      that can answer any question you throw at it—whether it’s from YouTube videos, files in any format, audio or 
+      video from your local system, or even Wikipedia. It’s designed to handle all kinds of data and provide you 
+      with unmatched insights in an engaging way.
+
+      Let’s be clear—this is a tech demo created purely for research and entertainment. It’s not here to replace anyone 
+      or anything, just to showcase the possibilities of AI. Use it responsibly and enjoy exploring its capabilities! 😊
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <p>developed by <strong>Devam Kathane</strong></p>
+      <p class="social-links">
+        <!-- Updated links for LinkedIn and GitHub -->
+        <a href="https://www.linkedin.com/in/devam-kathane-1ba11721b/" class="linkedin" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/Devam42?tab=repositories" class="github" target="_blank">Github</a> |
+      </p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © Copyright 2024.
+        All Rights Reserved by Devam Kathane.
+      </p>
+    </div>
+  </footer>
+
+  <!-- FLOATING CHAT WIDGET (bottom-right) -->
+  <div class="floating-chat">
+    <!-- Use a <video> tag instead of an <img> -->
+    <video
+      src="{{ url_for('static', filename='logos/Chatbot Language Translator.mp4') }}"
+      autoplay
+      loop
+      muted
+      playsinline
+      class="chatbot-video"
+    ></video>
+
+    <!-- Link to your /chat route -->
+    <a href="{{ url_for('chatbot') }}">Start chat</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Answerly</title>
+
+  <!-- Font Awesome (CDN) for any fallback icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-...your-hash-here..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Link to the Chatbot CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <!-- Optional: Preload loading video -->
+  <link rel="preload" as="video" href="{{ url_for('static', filename='loading.mp4') }}" type="video/mp4">
+</head>
+<body>
+  <div class="container">
+    <!-- CHAT AREA (3 parts) -->
+    <div class="chat-area">
+      <!-- Replaced h1 text with an image + text -->
+      <h1>
+        <img 
+          src="static/logos/0ddbce80-3e34-4b04-842c-e0911537c27f.webp"
+          alt="Answerly Logo"
+          class="answerly-logo"
+        />
+        Answerly
+      </h1>
+
+      <!-- Scrolling Chat Messages -->
+      <div class="chat-messages" id="chatMessages">
+        <!-- Messages will be dynamically added here by script.js -->
+      </div>
+
+      <!-- Chat Controls -->
+      <div class="chat-controls">
+        <input type="text" id="questionInput" placeholder="Ask a question..." />
+        <button id="askButton">Ask</button>
+        <button id="summarizeButton">Summarize</button>
+        <button class="danger" id="endConversationButton">End</button>
+      </div>
+    </div>
+
+    <!-- RESOURCE AREA (1 part) -->
+    <div class="resource-area">
+      <h2>How to Use</h2>
+      <p class="tip">Enter your username, then include up to three of each type of resource (YouTube links, websites, Wikipedia articles, files, audio, or video). After that, ask your question about those resources, and you'll be able to chat with the bot about them.
+
+        Note: The bot may take a moment to provide the first answer or summary while it processes your resources. Please be patient. Once it has read your files, subsequent answers will come faster.</p>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Your username" />
+
+      <!-- YOUTUBE LINKS -->
+      <details>
+        <summary>
+          <!-- Example mp4 icon -->
+          <video
+            src="static/mp4_icons/Youtube.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            class="resource-icon-video"
+          ></video>
+          YouTube Links
+        </summary>
+        <div class="resource-inputs">
+          <input type="text" id="youtube1" placeholder="YouTube Link 1" />
+          <input type="text" id="youtube2" placeholder="YouTube Link 2" />
+          <input type="text" id="youtube3" placeholder="YouTube Link 3" />
+        </div>
+      </details>
+
+      <!-- WEBSITES -->
+      <details>
+        <summary>
+          <video
+            src="static/mp4_icons/Url Chain.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            class="resource-icon-video"
+          ></video>
+          Website URLs
+        </summary>
+        <div class="resource-inputs">
+          <input type="text" id="website1" placeholder="Website URL 1" />
+          <input type="text" id="website2" placeholder="Website URL 2" />
+          <input type="text" id="website3" placeholder="Website URL 3" />
+        </div>
+      </details>
+
+      <!-- WIKIPEDIA TITLES -->
+      <details>
+        <summary>
+          <video
+            src="static/mp4_icons/Wikipedia.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            class="resource-icon-video"
+          ></video>
+          Wikipedia Titles
+        </summary>
+        <div class="resource-inputs">
+          <input type="text" id="wiki1" placeholder="Wikipedia Title 1" />
+          <input type="text" id="wiki2" placeholder="Wikipedia Title 2" />
+          <input type="text" id="wiki3" placeholder="Wikipedia Title 3" />
+        </div>
+      </details>
+
+      <!-- LOCAL FILES -->
+      <details>
+        <summary>
+          <video
+            src="static/mp4_icons/Files.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            class="resource-icon-video"
+          ></video>
+          Attach Files
+        </summary>
+        <div class="resource-inputs">
+          <input type="file" id="file1" />
+          <input type="file" id="file2" />
+          <input type="file" id="file3" />
+        </div>
+      </details>
+
+      <!-- LOCAL AUDIO -->
+      <details>
+        <summary>
+          <video
+            src="static/mp4_icons/Audio Wave.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            class="resource-icon-video"
+          ></video>
+          Attach Audio
+        </summary>
+        <div class="resource-inputs">
+          <input type="file" id="audio1" accept="audio/*" />
+          <input type="file" id="audio2" accept="audio/*" />
+          <input type="file" id="audio3" accept="audio/*" />
+        </div>
+      </details>
+
+      <!-- LOCAL VIDEO -->
+      <details>
+        <summary>
+          <video
+            src="static/mp4_icons/Scanning Videos file.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            class="resource-icon-video"
+          ></video>
+          Attach Video
+        </summary>
+        <div class="resource-inputs">
+          <input type="file" id="video1" accept="video/*" />
+          <input type="file" id="video2" accept="video/*" />
+          <input type="file" id="video3" accept="video/*" />
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- Link to external JS -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
